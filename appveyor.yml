@@ -1,0 +1,6 @@
+image: visual studio 2017
+services:
+  - mssql2017
+test_script:
+  - ps: ./test-sqlconnection.ps1
+build: off
