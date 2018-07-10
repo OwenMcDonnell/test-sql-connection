@@ -3,9 +3,8 @@ services:
   - mssql2017
 before_test:
   ps: |
-
-          $sqlConnection = New-Object System.Data.SqlClient.SqlConnection "Server=(local)\SQL2017;Database=master;User ID=sa;Password=Password12!";
-          $sqlConnection.Open();
+      $sqlConnection = New-Object System.Data.SqlClient.SqlConnection "Server=(local)\SQL2017;Database=master;User ID=sa;Password=Password12!";
+      $sqlConnection.Open();
                  
 test_script:
   - ps: ./test-sqlconnection.ps1
